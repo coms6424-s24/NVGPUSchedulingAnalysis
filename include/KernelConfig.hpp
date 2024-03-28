@@ -45,7 +45,7 @@ public:
 
         // Calculate grid size for kernel6
         // Ensure the number of threads is equal to half of the maximum supported by each SM
-        grid_size6 = CalculateGridSize(0.5, 1, max_thread_per_sm, block_size5.x);
+        grid_size6 = CalculateGridSize(0.5, 1, max_thread_per_sm, block_size6.x);
     }
 
     static constexpr std::size_t MegaBytes(std::size_t size)
