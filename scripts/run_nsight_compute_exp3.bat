@@ -1,6 +1,6 @@
 @echo off
 
-set NCU_PATH="D:/Program Files/NVIDIA Corporation/Nsight Compute 2024.1.0/target/windows-desktop-win7-x64/ncu.exe"
+set NCU_PATH="C:\Program Files\NVIDIA Corporation\Nsight Compute 2024.1.0\target\windows-desktop-win7-x64/ncu.exe"
 set OUTPUT_DIR="./Experiment3"
 set APP_EXE="./Experiment3.exe"
 set METRICS=sm_efficiency,achieved_occupancy
