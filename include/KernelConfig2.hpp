@@ -25,7 +25,7 @@ public:
 
         // Calculate grid size for kernel1
         // Ensure the number of threads surpasses the maximum allowable limit for concurrent scheduling
-        grid_size1 = CalculateGridSize(1.5, sm_count, max_thread_per_sm, block_size1.x);
+        grid_size1 = CalculateGridSize(0.5, sm_count, max_thread_per_sm, block_size1.x);
 
         // Calculate grid size for kernel2
         // Ensure the number of threads remains below the maximum supported by each SM
@@ -37,7 +37,7 @@ public:
 
         // Calculate grid size for kernel4
         // Ensure the number of threads is equal to half of the maximum supported by each SM
-        grid_size4 = CalculateGridSize(0.5, sm_count, max_thread_per_sm, block_size4.x);
+        grid_size4 = CalculateGridSize(1.5, sm_count, max_thread_per_sm, block_size4.x);
 
         // Calculate grid size for kernel5
         // Ensure the number of threads is equal to 1/4 of the maximum supported by each SM
