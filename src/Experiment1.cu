@@ -1,21 +1,21 @@
 #include <Windows.h>
 #include <chrono>
 #include <thread>
-#include "../include/Kernels.cuh"
+#include "../include/KernelsExp1.cuh"
 #include "../include/StreamManager.hpp"
 #include "../include/TimerSpin.cuh"
-#include "../include/KernelConfig.hpp"
+#include "../include/KernelConfig1.hpp"
 
 KernelConfig g_kernel_config;
 
-void CPU0Behavior(StreamManager& stream1, void* device_data_src, void* device_data_dst)
+void CPU0Behavior(StreamManager& stream1, void* device_data, void* host_data)
 {
     stream1.ScheduleKernelExecution("kernel1");
     stream1.ScheduleKernelExecution("kernel2");
-    stream1.AddCopyOperation(device_data_src, device_data_dst, g_kernel_config.copy_size2, cudaMemcpyDeviceToHost); // Copy after K2
-    stream1.AddCopyOperation(device_data_src, device_data_dst, g_kernel_config.copy_size3, cudaMemcpyHostToDevice); // Copy before K3
+    stream1.AddCopyOperation(device_data, host_data, g_kernel_config.copy_size2, cudaMemcpyDeviceToHost); // Copy after K2
+    stream1.AddCopyOperation(host_data, device_data, g_kernel_config.copy_size3, cudaMemcpyHostToDevice); // Copy before K3
     stream1.ScheduleKernelExecution("kernel3");
-    stream1.AddCopyOperation(device_data_src, device_data_dst, g_kernel_config.copy_size3, cudaMemcpyDeviceToHost); // Copy after K3
+    stream1.AddCopyOperation(device_data, host_data, g_kernel_config.copy_size3, cudaMemcpyDeviceToHost); // Copy after K3
 
     std::cout << "Executing scheduled kernel1, 2, 3 on stream1..." << std::endl;
     stream1.ExecuteScheduledOperations();
@@ -23,7 +23,7 @@ void CPU0Behavior(StreamManager& stream1, void* device_data_src, void* device_da
     std::cout << "kernel1, 2 and 3 on stream1 completed" << std::endl;
 }
 
-void CPU1Behavior(StreamManager& stream2, StreamManager& stream3, void* device_data_src, void* device_data_dst)
+void CPU1Behavior(StreamManager& stream2, StreamManager& stream3, void* device_data, void* host_data)
 {
     int wait_time_ms1 = 200;
     std::cout << "Sleep waiting for "<< wait_time_ms1 << "ms" << std::endl;
@@ -36,7 +36,7 @@ void CPU1Behavior(StreamManager& stream2, StreamManager& stream3, void* device_d
     std::this_thread::sleep_for(std::chrono::milliseconds(wait_time_ms2));
 
     stream3.ScheduleKernelExecution("kernel5");
-    stream3.AddCopyOperation(device_data_src, device_data_dst, g_kernel_config.copy_size5, cudaMemcpyDeviceToHost);
+    stream3.AddCopyOperation(device_data, host_data, g_kernel_config.copy_size5, cudaMemcpyDeviceToHost);
 
     std::cout << "Executing scheduled kernel4 on stream2, kernel5 on stream3..." << std::endl;
     stream2.ExecuteScheduledOperations();
@@ -46,12 +46,12 @@ void CPU1Behavior(StreamManager& stream2, StreamManager& stream3, void* device_d
     stream3.Synchronize();
     std::cout << "kernel4 on stream2, kernel5 on stream3 completed" << std::endl;
 
-    int wait_time_ms3 = 2400;
+    int wait_time_ms3 = 1400;
     std::cout << "Sleep waiting for " << wait_time_ms3 <<"ms" << std::endl;
     std::this_thread::sleep_for(std::chrono::milliseconds(wait_time_ms3));
 
     stream2.ScheduleKernelExecution("kernel6");
-    stream2.AddCopyOperation(device_data_src, device_data_dst, g_kernel_config.copy_size6, cudaMemcpyDeviceToHost);
+    stream2.AddCopyOperation(device_data, host_data, g_kernel_config.copy_size6, cudaMemcpyDeviceToHost);
     std::cout << "Executing kernel6 on stream2..." << std::endl;
     stream2.ExecuteScheduledOperations();
     stream2.Synchronize();
@@ -72,11 +72,11 @@ int main()
 
     g_kernel_config.SetParameter(properties);
 
-    void* device_data_src = nullptr;
-    void* device_data_dst = nullptr;
+    void* device_data = nullptr;
+    void* host_data = nullptr;
 
-    cudaMalloc(&device_data_src, 256 * 1024 * 1024);
-    cudaMalloc(&device_data_dst, 256 * 1024 * 1024);
+    cudaMalloc(&device_data, 256 * 1024 * 1024);
+    host_data = malloc(256 * 1024 * 1024);
 
     StreamManager stream1;
     StreamManager stream2;
@@ -95,8 +95,8 @@ int main()
     stream3.AddKernel("kernel5", g_kernel_config.grid_size5, g_kernel_config.block_size5, g_kernel_config.shared_mem_size5, kernel5);
 
     // Simulate 2 CPUs environment in the paper
-    std::thread cpu0(CPU0Behavior, std::ref(stream1), device_data_src, device_data_dst);
-    std::thread cpu1(CPU1Behavior, std::ref(stream2), std::ref(stream3), device_data_src, device_data_dst);
+    std::thread cpu0(CPU0Behavior, std::ref(stream1), device_data, host_data);
+    std::thread cpu1(CPU1Behavior, std::ref(stream2), std::ref(stream3), device_data, host_data);
 
     cpu0.join();
     cpu1.join();
