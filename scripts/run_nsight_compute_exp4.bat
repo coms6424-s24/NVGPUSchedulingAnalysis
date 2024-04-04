@@ -1,8 +1,8 @@
 @echo off
 
 set NCU_PATH="D:/Program Files/NVIDIA Corporation/Nsight Compute 2024.1.0/target/windows-desktop-win7-x64/ncu.exe"
-set OUTPUT_DIR="./Experiment1"
-set APP_EXE="./Experiment1.exe"
+set OUTPUT_DIR="./Experiment4"
+set APP_EXE="./Experiment4.exe"
 set METRICS=sm_efficiency,achieved_occupancy
 set SECTIONS=MemoryWorkloadAnalysis
 set LAUNCH_SKIP=2
