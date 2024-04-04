@@ -1,3 +1,5 @@
+// Copy Engine Testing
+
 #include <Windows.h>
 #include <chrono>
 #include "../include/StreamManager.hpp"
@@ -15,7 +17,7 @@ int main()
               << "  Maximum number of threads per multiprocessor: " << properties.maxThreadsPerMultiProcessor << std::endl
               << "  Maximum number of warps per multiprocessor: " << properties.maxThreadsPerMultiProcessor / 32 << std::endl;
 
-    size_t copy_size = 1024 * 1024 * 1024;
+    size_t copy_size = 1024 * 1024 * 1024 * 1024;
 
     void* host_data_src1 = nullptr;
     void* device_data_dst1 = nullptr;
@@ -32,20 +34,20 @@ int main()
     void* host_data_src5 = nullptr;
     void* device_data_dst5 = nullptr;
 
-    host_data_src1 = malloc(1024 * 1024 * 1024);
-    cudaMalloc(&device_data_dst1, 1024 * 1024 * 1024);
+    host_data_src1 = malloc(copy_size);
+    cudaMalloc(&device_data_dst1, copy_size);
 
-    host_data_src2= malloc(1024 * 1024 * 1024);
-    cudaMalloc(&device_data_dst2, 1024 * 1024 * 1024);
+    host_data_src2= malloc(copy_size);
+    cudaMalloc(&device_data_dst2, copy_size);
 
-    host_data_src3 = malloc(1024 * 1024 * 1024);
-    cudaMalloc(&device_data_dst3, 1024 * 1024 * 1024);
+    host_data_src3 = malloc(copy_size);
+    cudaMalloc(&device_data_dst3, copy_size);
 
-    host_data_src4 = malloc(1024 * 1024 * 1024);
-    cudaMalloc(&device_data_dst4, 1024 * 1024 * 1024);
+    host_data_src4 = malloc(copy_size);
+    cudaMalloc(&device_data_dst4, copy_size);
 
-    host_data_src5 = malloc(1024 * 1024 * 1024);
-    cudaMalloc(&device_data_dst5, 1024 * 1024 * 1024);
+    host_data_src5 = malloc(copy_size);
+    cudaMalloc(&device_data_dst5, copy_size);
 
     StreamManager stream1;
     StreamManager stream2;
