@@ -25,7 +25,7 @@ int main()
 
     g_kernel_config.SetParameter(properties);
 
-    int data_size = 1000000;
+    int data_size = 1024;
     size_t bytes = data_size * sizeof(float);
 
     float *input1, *output1;
@@ -65,42 +65,24 @@ int main()
     stream1.Synchronize();
     stream2.Synchronize();
 
-    stream1.AddKernel("shared1", g_kernel_config.grid_size1, g_kernel_config.block_size1, 0, 
-    MemoryIntensiveKernel, d_input1, d_output1, g_kernel_config.block_size1.x * data_size);
+    stream1.AddKernel("shared1", g_kernel_config.grid_size1, g_kernel_config.block_size1, g_kernel_config.data_size1, 
+    MemoryIntensiveKernel, d_input1, g_kernel_config.block_size1.x * sizeof(float));
 
-    stream2.AddKernel("shared2", g_kernel_config.grid_size2, g_kernel_config.block_size2, 0, 
-    MemoryIntensiveKernel, d_input2, d_output2, g_kernel_config.block_size2.x * data_size);
+    stream2.AddKernel("shared2", g_kernel_config.grid_size2, g_kernel_config.block_size2, g_kernel_config.data_size2, 
+    MemoryIntensiveKernel, d_input2, g_kernel_config.block_size2.x * sizeof(float));
+
+    stream2.AddKernel("shared3", g_kernel_config.grid_size2, g_kernel_config.block_size2, 1024, 
+    MemoryIntensiveKernel, d_input2, 256);
 
     stream1.ScheduleKernelExecution("shared1");
     stream2.ScheduleKernelExecution("shared2");
+    stream2.ScheduleKernelExecution("shared3");
 
     stream1.ExecuteScheduledOperations();
     stream2.ExecuteScheduledOperations();
 
     stream1.Synchronize();
     stream2.Synchronize();
-
-    std::cout << "MemoryIntensiveKernel completed" << std::endl;
-
-    stream1.AddKernel("register1", g_kernel_config.grid_size1, g_kernel_config.block_size1, 0, 
-    RegisterIntensiveKernel, d_input1, d_output1, g_kernel_config.block_size1.x * data_size);
-
-    stream2.AddKernel("register2", g_kernel_config.grid_size2, g_kernel_config.block_size2, 0, 
-    RegisterIntensiveKernel, d_input2, d_output2, g_kernel_config.block_size2.x * data_size);
-
-    stream1.ScheduleKernelExecution("register1");
-    stream2.ScheduleKernelExecution("register2");
-
-    stream1.ExecuteScheduledOperations();
-    stream2.ExecuteScheduledOperations();
-
-    stream1.Synchronize();
-    stream2.Synchronize();
-
-    std::cout << "RegisterIntensiveKernel completed" << std::endl;
-
-    cudaMemcpy(output1, d_output1, bytes, cudaMemcpyDeviceToHost);
-    cudaMemcpy(output2, d_output2, bytes, cudaMemcpyDeviceToHost);
 
     cudaFree(d_input1);
     cudaFree(d_output1);
