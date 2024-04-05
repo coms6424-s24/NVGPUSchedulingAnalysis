@@ -25,12 +25,10 @@ public:
         size_t shared_mem_size_per_block = prop.sharedMemPerBlock;
 
         // Calculate grid size for kernel1
-        // Ensure the number of threads surpasses the maximum allowable limit for concurrent scheduling
         grid_size1 = sm_count * max_thread_per_sm / block_size1.x;
         data_size1 = shared_mem_size_per_block;
 
         // Calculate grid size for kernel2
-        // Ensure the number of threads remains below the maximum supported by each SM
         grid_size2 = sm_count * max_thread_per_sm / block_size2.x;
         data_size2 = shared_mem_size_per_block;
     }

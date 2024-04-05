@@ -1,31 +1,23 @@
 #include "../include/KernelsExp4.cuh"
 
-__global__ void MemoryIntensiveKernel(float *input, float *output, int data_size)
-{
+__global__ void MemoryIntensiveKernel(float *input, int data_size) {
     extern __shared__ float shared[];
 
-    int tid = threadIdx.x;
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    int radius = 5; // Convolution kernel radius
-    int diameter = 2 * radius + 1;
+    int tid = threadIdx.x;
 
-    // Load data into shared memory
     if (idx < data_size) {
         shared[tid] = input[idx];
-        __syncthreads();
-
-        float sum = 0.0;
-        for (int i = -radius; i <= radius; ++i) {
-            int sharedIdx = tid + i;
-            if (sharedIdx >= 0 && sharedIdx < blockDim.x) {
-                sum += shared[sharedIdx] * (radius - abs(i) + 1);
-            }
-        }
-        output[idx] = sum / diameter;
 
         __syncthreads();
+
+        float temp = shared[tid];
+        temp = exp(sin(temp) + cos(temp) + log(fabs(temp) + 1.0f) + exp(temp));
+
+        input[idx] = temp;
     }
 }
+
 
 __global__ void RegisterIntensiveKernel(float *input, float *output, int data_size)
 {
