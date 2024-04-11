@@ -22,15 +22,30 @@ public:
     {
         int sm_count = prop.multiProcessorCount;
         int max_thread_per_sm = prop.maxThreadsPerMultiProcessor;
-        size_t shared_mem_size_per_block = prop.sharedMemPerBlock;
 
         // Calculate grid size for kernel1
-        grid_size1 = sm_count * max_thread_per_sm / block_size1.x;
-        data_size1 = 5 * shared_mem_size_per_block / 6;
+        // Ensure the number of threads surpasses the maximum allowable limit for concurrent scheduling
+        grid_size1 = CalculateGridSize(1.5, sm_count, max_thread_per_sm, block_size1.x);
 
         // Calculate grid size for kernel2
-        grid_size2 = sm_count * max_thread_per_sm / block_size2.x;
-        data_size2 = 5 * shared_mem_size_per_block / 6;
+        // Ensure the number of threads surpasses the maximum supported by each SM
+        grid_size2 = CalculateGridSize(1.5, 1, max_thread_per_sm, block_size2.x);
+
+        // Calculate grid size for kernel3
+        // Ensure the number of threads surpasses the maximum supported by each SM
+        grid_size3 = CalculateGridSize(1.5, 1, max_thread_per_sm, block_size3.x);
+
+        // Calculate grid size for kernel4
+        // Ensure the number of threads surpasses the maximum supported by each SM
+        grid_size4 = CalculateGridSize(1.5, 1, max_thread_per_sm, block_size4.x);
+
+        // Calculate grid size for kernel5
+        // Ensure the number of threads is equal to half of the maximum supported by each SM
+        grid_size5 = CalculateGridSize(0.5, 1, max_thread_per_sm, block_size5.x);
+
+        // Calculate grid size for kernel6
+        // Ensure the number of threads surpasses the maximum supported by each SM
+        grid_size6 = CalculateGridSize(2, 1, max_thread_per_sm, block_size6.x);
     }
 
     static constexpr std::size_t MegaBytes(std::size_t size)
@@ -46,11 +61,27 @@ public:
 
     dim3 grid_size1{6, 1, 1};
     dim3 block_size1{1024, 1, 1};
-    size_t data_size1 = MegaBytes(256);
 
     dim3 grid_size2{2, 1, 1};
     dim3 block_size2{512, 1, 1};
-    size_t data_size2 = MegaBytes(256);
+    size_t copy_size2 = MegaBytes(256);
+
+    dim3 grid_size3{2, 1, 1};
+    dim3 block_size3{1024, 1, 1};
+    size_t copy_size3 = MegaBytes(256);
+
+    dim3 grid_size4{4, 1, 1};
+    dim3 block_size4{256, 1, 1};
+    size_t shared_mem_size4 = KiloBytes(32);
+
+    dim3 grid_size5{2, 1, 1};
+    dim3 block_size5{256, 1, 1};
+    size_t shared_mem_size5 = KiloBytes(32);
+    size_t copy_size5 = MegaBytes(256);
+
+    dim3 grid_size6{2, 1, 1};
+    dim3 block_size6{384, 1, 1};
+    size_t copy_size6 = MegaBytes(256);
 
 private:
     // Calculates the grid size based on the given factor, SM count, maximum threads per SM, and block size.
