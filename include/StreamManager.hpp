@@ -12,15 +12,21 @@
 class StreamManager {
 public:
     // Constructs a StreamManager object and creates a CUDA stream.
-    StreamManager()
+    StreamManager(bool use_null_stream = false)
     {
-        cudaStreamCreate(&stream_);
+        if (!use_null_stream) {
+            cudaStreamCreate(&stream_);
+        } else {
+            stream_ = nullptr;
+        }
     }
 
     // Destroys the StreamManager object and the associated CUDA stream.
     ~StreamManager()
     {
-        cudaStreamDestroy(stream_);
+        if (stream_ != nullptr) {
+            cudaStreamDestroy(stream_);
+        }
     }
 
     // Adds a new kernel to the stream manager.
@@ -94,7 +100,11 @@ public:
     // Synchronizes the CUDA stream, blocking until all operations are complete.
     void Synchronize()
     {
-        cudaStreamSynchronize(stream_);
+        if (stream_ == nullptr) {
+            cudaDeviceSynchronize();
+        } else {
+            cudaStreamSynchronize(stream_);
+        }
     }
 
 private:

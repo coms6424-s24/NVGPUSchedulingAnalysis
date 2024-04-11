@@ -71,7 +71,7 @@ int main()
     stream2.AddKernel("shared2", g_kernel_config.grid_size2, g_kernel_config.block_size2, g_kernel_config.data_size2, 
     MemoryIntensiveKernel, d_input2, g_kernel_config.block_size2.x * sizeof(float));
 
-    stream2.AddKernel("shared3", g_kernel_config.grid_size2, g_kernel_config.block_size2, 1024, 
+    stream2.AddKernel("shared3", g_kernel_config.grid_size2, g_kernel_config.block_size2, 0, 
     MemoryIntensiveKernel, d_input2, 256);
 
     stream1.ScheduleKernelExecution("shared1");
