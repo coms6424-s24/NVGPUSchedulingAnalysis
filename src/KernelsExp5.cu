@@ -2,7 +2,7 @@
 #include <device_launch_parameters.h>
 #include <math_constants.h>
 
-const unsigned long long target_duration = 4000000000ULL; // 4e9 clock ticks ≈ 1 second
+const unsigned long long target_duration = 4000000000ULL; // 4e9 clock ticks
 
 // Kernel 1: Performs trigonometric operations on a float value.
 __global__ void kernel1()
