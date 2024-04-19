@@ -87,9 +87,17 @@ __global__ void KernelGenerator::TestKernel(int *smids, int *block_ids, int *thr
     __syncthreads();
 
     // Perform some computations using registers and shared memory
-    int reg_val = thread_id;
-    for (int i = 0; i < blockDim.x; i++) {
-        reg_val += shared_mem[i];
+    const int regs_count = 256;
+    const int smem_count = shared_mem_sizes[block_id] / sizeof(int);
+    int regs[regs_count];
+
+    #pragma unroll 256
+    for (int i = 0; i < smem_count; i++) {
+        regs[i % regs_count] += shared_mem[i];
+    }
+
+    for (int i = 0; i < regs_count && i < smem_count; i++) {
+        shared_mem[i] = regs[i];
     }
 
     // Introduce a delay based on the kernel duration
