@@ -33,7 +33,7 @@ public:
         grid_size3 = CalculateGridSize(0.25, sm_count, max_thread_per_sm, block_size3.x);
 
         // Calculate grid size for kernel4
-        grid_size4 = CalculateGridSize(0.5, sm_count, max_thread_per_sm, block_size4.x);
+        grid_size4 = CalculateGridSize(0.75, sm_count, max_thread_per_sm, block_size4.x);
 
         // Calculate grid size for kernel5
         grid_size5 = CalculateGridSize(0.25, sm_count, max_thread_per_sm, block_size5.x);
