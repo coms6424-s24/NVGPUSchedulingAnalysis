@@ -8,6 +8,17 @@
 #include <execution>
 #include "CudaKernel.hpp"
 
+// Custom deleter for device memory
+struct cudaDeleter {
+    void operator()(void* ptr) {
+        cudaFree(ptr);
+    }
+};
+
+// Using a unique_ptr with the custom deleter
+template<typename T>
+using unique_cuda_ptr = std::unique_ptr<T, cudaDeleter>;
+
 // Manages CUDA streams and kernel execution.
 class StreamManager {
 public:
@@ -42,6 +53,45 @@ public:
         }
     }
 
+    // Allocates device memory for the stream manager.
+    void AllocateDeviceMemory(int max_blocks, int max_threads_per_block)
+    {
+        int* int_raw_ptr;
+        float* float_raw_ptr;
+
+        cudaMalloc(reinterpret_cast<void**>(&int_raw_ptr), max_blocks * sizeof(int));
+        d_smids_.reset(int_raw_ptr);
+
+        cudaMalloc(reinterpret_cast<void**>(&int_raw_ptr), max_blocks * sizeof(int));
+        d_block_ids_.reset(int_raw_ptr);
+
+        cudaMalloc(reinterpret_cast<void**>(&int_raw_ptr), max_blocks * max_threads_per_block * sizeof(int));
+        d_thread_ids_.reset(int_raw_ptr);
+
+        cudaMalloc(reinterpret_cast<void**>(&int_raw_ptr), max_blocks * sizeof(int));
+        d_block_dims_.reset(int_raw_ptr);
+
+        cudaMalloc(reinterpret_cast<void**>(&int_raw_ptr), max_blocks * max_threads_per_block * sizeof(int));
+        d_thread_dims_.reset(int_raw_ptr);
+
+        cudaMalloc(reinterpret_cast<void**>(&int_raw_ptr), max_blocks * sizeof(int));
+        d_shared_mem_sizes_.reset(int_raw_ptr);
+
+        cudaMalloc(reinterpret_cast<void**>(&float_raw_ptr), max_blocks * sizeof(float));
+        d_kernel_durations_.reset(float_raw_ptr);
+
+        std::cout << "Size of d_kernel_durations: " << max_blocks * sizeof(float) << " bytes" << std::endl;
+    }
+
+    // Getter methods to access the device memory pointers.
+    int* GetDeviceSmids() { return d_smids_.get(); }
+    int* GetDeviceBlockIds() { return d_block_ids_.get(); }
+    int* GetDeviceThreadIds() { return d_thread_ids_.get(); }
+    int* GetDeviceBlockDims() { return d_block_dims_.get(); }
+    int* GetDeviceThreadDims() { return d_thread_dims_.get(); }
+    int* GetDeviceSharedMemSizes() { return d_shared_mem_sizes_.get(); }
+    float* GetDeviceKernelDurations() { return d_kernel_durations_.get(); }
+
     // Adds a new kernel to the stream manager.
     //
     // @tparam Func The type of the kernel function.
@@ -71,6 +121,7 @@ public:
         if (auto it = kernel_map_.find(name); it != kernel_map_.end()) {
             CudaKernel* kernel_ptr = it->second.get();
             operations_.emplace_back([this, kernel_ptr]() { 
+                std::cout << "Executing kernel: " << kernel_ptr->GetName() << std::endl;
                 kernel_ptr->Run(stream_); 
             });
         } else {
@@ -95,6 +146,7 @@ public:
         for (auto& operation: operations_) {
             operation();
         }
+        std::cout << "Size of operation: " << operations_.size() << std::endl;
         operations_.clear();
     }
 
@@ -129,6 +181,15 @@ private:
     cudaStream_t stream_;  // The CUDA stream associated with the manager.
     std::vector<std::function<void()>> operations_;  // Stores all scheduled operations.
     std::unordered_map<std::string, std::unique_ptr<CudaKernel>> kernel_map_;  // Stores kernels by name for potential rescheduling.
+
+    // Device memory pointers
+    unique_cuda_ptr<int> d_smids_;
+    unique_cuda_ptr<int> d_block_ids_;
+    unique_cuda_ptr<int> d_thread_ids_;
+    unique_cuda_ptr<int> d_block_dims_;
+    unique_cuda_ptr<int> d_thread_dims_;
+    unique_cuda_ptr<int> d_shared_mem_sizes_;
+    unique_cuda_ptr<float> d_kernel_durations_;
 };
 
 #endif

@@ -4,7 +4,9 @@
 
 SchedulingPredictor::SchedulingPredictor(int num_SMs) : num_SMs_(num_SMs)
 {
-    std::generate_n(std::back_inserter(round_robin_queue_), num_SMs_, [n = 0]() mutable { return n++; });
+    for (int i = 0; i < num_SMs_; i++) {
+        round_robin_queue_.push(i);
+    }
 }
 
 void SchedulingPredictor::Predict(int num_streams, int num_kernels_per_stream, int num_blocks_per_kernel)
