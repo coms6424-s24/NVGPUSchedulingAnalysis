@@ -48,7 +48,8 @@ int main() {
         input_file >> training_data;
         input_file.close();
 
-        scheduling_predictor.Predict(num_streams, num_kernels_per_stream, max_blocks);
+        scheduling_predictor.Predict(training_data);
+        scheduling_predictor.ComparePredictions(training_data);
 
         std::cout << "Kernels executed and data processed successfully." << std::endl;
     } catch (const std::exception& e) {

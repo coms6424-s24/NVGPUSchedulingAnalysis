@@ -16,7 +16,8 @@ __global__ void TestKernel(int *smids, int *block_ids, int *thread_ids, int *blo
         smids[block_id] = smid;
         block_ids[block_id] = block_id;
         block_dims[block_id] = blockDim.x;
-        shared_mem_sizes[block_id] = (int)blockDim.x * sizeof(int);
+        // shared_mem_sizes[block_id] = (int)blockDim.x * sizeof(int);
+        shared_mem_sizes[block_id] = 10000;
     }
 
     thread_ids[block_id * blockDim.x + thread_id] = thread_id;

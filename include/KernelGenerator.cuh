@@ -47,6 +47,7 @@ public:
         std::vector<std::vector<int>> block_to_sm(num_streams, std::vector<int>(max_blocks_, 0));
         std::vector<std::vector<int>> block_ids(num_streams, std::vector<int>(max_blocks_, 0));
         std::vector<std::vector<int>> block_dims(num_streams, std::vector<int>(max_blocks_, 0));
+        std::vector<std::vector<int>> thread_ids(num_streams, std::vector<int>(max_blocks_ * max_threads_, 0));
         std::vector<std::vector<int>> thread_dims(num_streams, std::vector<int>(max_blocks_ * max_threads_, 0));
         std::vector<std::vector<int>> shared_mem_sizes(num_streams, std::vector<int>(max_blocks_, 0));
         std::vector<std::vector<float>> kernel_durations(num_streams, std::vector<float>(max_blocks_, 0.0f));
@@ -101,7 +102,6 @@ public:
 
                 if (max_blocks_ * sizeof(float) != kernel_exec_durations.size() * sizeof(float)) {
                     std::cerr << "Sizes of d_kernel_durations and kernel_exec_durations do not match." << std::endl;
-                    // Handle the error, e.g., throw an exception or return an error code
                 }
 
                 manager->AddCopyOperation(d_kernel_durations, kernel_exec_durations.data(), max_blocks_ * sizeof(float), cudaMemcpyHostToDevice);
@@ -133,6 +133,7 @@ public:
             int* d_block_ids = manager->GetDeviceBlockIds();
             int* d_block_dims = manager->GetDeviceBlockDims();
             int* d_thread_ids = manager->GetDeviceThreadIds();
+            int* d_thread_dims = manager->GetDeviceThreadDims();
             int* d_shared_mem_sizes = manager->GetDeviceSharedMemSizes();
             float* d_kernel_durations = manager->GetDeviceKernelDurations();
 
@@ -160,9 +161,14 @@ public:
                 std::cerr << "Failed to copy block_dims: " << cudaGetErrorString(error) << std::endl;
             }
 
-            error = cudaMemcpy(thread_dims[stream_index].data(), d_thread_ids, max_blocks_ * max_threads_ * sizeof(int), cudaMemcpyDeviceToHost);
+            error = cudaMemcpy(thread_dims[stream_index].data(), d_thread_dims, max_blocks_ * max_threads_ * sizeof(int), cudaMemcpyDeviceToHost);
             if (error != cudaSuccess) {
                 std::cerr << "Failed to copy thread_dims: " << cudaGetErrorString(error) << std::endl;
+            }
+
+            error = cudaMemcpy(thread_ids[stream_index].data(), d_thread_ids, max_blocks_ * max_threads_ * sizeof(int), cudaMemcpyDeviceToHost);
+            if (error != cudaSuccess) {
+                std::cerr << "Failed to copy thread_ids: " << cudaGetErrorString(error) << std::endl;
             }
 
             error = cudaMemcpy(shared_mem_sizes[stream_index].data(), d_shared_mem_sizes, max_blocks_ * sizeof(int), cudaMemcpyDeviceToHost);
@@ -199,7 +205,7 @@ public:
                     block_data["block_id"] = block_ids[stream_index][j];
                     block_data["sm_id"] = block_to_sm[stream_index][j];
                     block_data["block_dim"] = block_dims[stream_index][j];
-                    block_data["thread_dim"] = thread_dims[stream_index][j * thread_per_block];
+                    block_data["thread_dim"] = thread_dims[stream_index][j];
                     block_data["shared_mem_size"] = shared_mem_sizes[stream_index][j];
                     block_data["kernel_duration"] = 1.0;
                     kernel_data["blocks"].push_back(block_data);
