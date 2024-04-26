@@ -5,6 +5,8 @@
 #include <queue>
 #include <unordered_map>
 #include <string>
+#include <cuda_runtime.h>
+#include "../include/json.hpp"
 
 // Class to predict thread block scheduling on SMs
 class SchedulingPredictor {
@@ -12,13 +14,13 @@ public:
     explicit SchedulingPredictor(int num_SMs);
 
     // Initialize round-robin predictions for each block in each kernel on each stream
-    void Predict(int num_streams, int num_kernels_per_stream, int num_blocks_per_kernel);
+    void Predict(const nlohmann::json& training_data);
 
     // Get predictions for a specific stream and kernel
     std::vector<int> GetPredictions(int stream_id, const std::string& kernel_id);
 
-    // Output current predictions for manual verification
-    void OutputPredictions() const;
+    // compare its prediction results with the ground truth
+    void ComparePredictions(const nlohmann::json& training_data);
 
 private:
     int num_SMs_;  // Number of Streaming Multiprocessors
