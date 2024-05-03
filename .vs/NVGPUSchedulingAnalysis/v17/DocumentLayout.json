@@ -1,0 +1,263 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build_testing_framework.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\build_testing_framework.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build_exp1.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\build_exp1.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\run_nsight_compute_exp4.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\run_nsight_compute_exp4.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\run_nsight_compute_exp2.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\run_nsight_compute_exp2.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\run_nsight_compute_exp3.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\run_nsight_compute_exp3.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build_exp2.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\build_exp2.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build_exp4.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\build_exp4.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\run_nsight_compute_exp1.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\run_nsight_compute_exp1.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build_exp3.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\build_exp3.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\src\\Experiment1.cu||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Experiment1.cu||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ximing\\Source\\Repos\\NVGPUSchedulingAnalysis\\src\\query.cu||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\query.cu||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\include\\KernelConfig.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:include\\KernelConfig.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\build.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\run_nsight_compute.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\run_nsight_compute.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|CMake Overview Pages||{B1CAA5B0-FEB1-4350-8AB9-F895876842F2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "build_testing_framework.bat",
+              "DocumentMoniker": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build_testing_framework.bat",
+              "RelativeDocumentMoniker": "scripts\\build_testing_framework.bat",
+              "ToolTip": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build_testing_framework.bat",
+              "RelativeToolTip": "scripts\\build_testing_framework.bat",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAaAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJbSURBVEhL7ZVdSFNhHMafUwyU3FpG2gextWkE7lA4R6S4nVkWCkENtYYQ1U03uwy66LqLoKvdRRd9UKzSjIoYMmrrw2CRSU0tp/twWEGBzmlzO6nrvIdz7IDvJla7CPrBOe\u002Bf877/5znPy3s4KCq5XE6q/mEYcrtw8VJRopw/d5ZZI9V/RGNDPXVcgiTgef6vXNlsVrzkXSmYIBofh8//HKmZWXH89PmLNENHPjTKw1PQwOd/BkZVAk93D3JrVQi\u002BeSvNLIcmTqAakDftefgYKpUKemMVmg61QmcwYmo6hctXb4jJlOQTJ1ANhkdGod1UCXtzC94P9KPP/wSD7wbQwDUJRlWIxH4Z0MSVNdVgb10tRj8OC4eYQWpqEic7j2EmmRTONIPx6Jg4T1hJnEA1IHtdvauG6GN9\u002BUZcu3UHau0G8avRG6uF\u002Bf6C4spnVAPjDp2QYAhPe73YY66Ddf9B7K4146WwVbPJSTGV2\u002B1GMBiUOujiBKqBQa/DmVMnoNWoEYuMwed9hHg0gvn5H1hYXITR0gj78dPAZgOu3\u002B5aJr5iAhmy1wuZNJxtDuT4OVSUa1FjqQe7vQLhF70w6yqxcx\u002BHUCi0ugQy27ZuQbPdCo26DAc4KxLxGEpKS3G/\u002By6cTice3OuCpmwdAoGAuH7VCWTkBo7jwGcyONreAY/HgyNtHUh/T8Nms/1eAoKykWVZDL7uw8jEN7BcC0KJr/jwyg\u002BTybS0RjkSChrQGhyHWzGdCMN78wrmJsLobHeIz2lrCXkNaA1ybbFY4HK5xJGQT5xQ9B\u002BOVP4nH8BPE6mENmzTR0MAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-05-03T20:58:36.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "run_nsight_compute_exp4.bat",
+              "DocumentMoniker": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\run_nsight_compute_exp4.bat",
+              "RelativeDocumentMoniker": "scripts\\run_nsight_compute_exp4.bat",
+              "ToolTip": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\run_nsight_compute_exp4.bat",
+              "RelativeToolTip": "scripts\\run_nsight_compute_exp4.bat",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJbSURBVEhL7ZVdSFNhHMafUwyU3FpG2gextWkE7lA4R6S4nVkWCkENtYYQ1U03uwy66LqLoKvdRRd9UKzSjIoYMmrrw2CRSU0tp/twWEGBzmlzO6nrvIdz7IDvJla7CPrBOe\u002Bf877/5znPy3s4KCq5XE6q/mEYcrtw8VJRopw/d5ZZI9V/RGNDPXVcgiTgef6vXNlsVrzkXSmYIBofh8//HKmZWXH89PmLNENHPjTKw1PQwOd/BkZVAk93D3JrVQi\u002BeSvNLIcmTqAakDftefgYKpUKemMVmg61QmcwYmo6hctXb4jJlOQTJ1ANhkdGod1UCXtzC94P9KPP/wSD7wbQwDUJRlWIxH4Z0MSVNdVgb10tRj8OC4eYQWpqEic7j2EmmRTONIPx6Jg4T1hJnEA1IHtdvauG6GN9\u002BUZcu3UHau0G8avRG6uF\u002Bf6C4spnVAPjDp2QYAhPe73YY66Ddf9B7K4146WwVbPJSTGV2\u002B1GMBiUOujiBKqBQa/DmVMnoNWoEYuMwed9hHg0gvn5H1hYXITR0gj78dPAZgOu3\u002B5aJr5iAhmy1wuZNJxtDuT4OVSUa1FjqQe7vQLhF70w6yqxcx\u002BHUCi0ugQy27ZuQbPdCo26DAc4KxLxGEpKS3G/\u002By6cTice3OuCpmwdAoGAuH7VCWTkBo7jwGcyONreAY/HgyNtHUh/T8Nms/1eAoKykWVZDL7uw8jEN7BcC0KJr/jwyg\u002BTybS0RjkSChrQGhyHWzGdCMN78wrmJsLobHeIz2lrCXkNaA1ybbFY4HK5xJGQT5xQ9B\u002BOVP4nH8BPE6mENmzTR0MAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-04-05T03:01:42.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "build_exp2.bat",
+              "DocumentMoniker": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build_exp2.bat",
+              "RelativeDocumentMoniker": "scripts\\build_exp2.bat",
+              "ToolTip": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build_exp2.bat",
+              "RelativeToolTip": "scripts\\build_exp2.bat",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABKAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJbSURBVEhL7ZVdSFNhHMafUwyU3FpG2gextWkE7lA4R6S4nVkWCkENtYYQ1U03uwy66LqLoKvdRRd9UKzSjIoYMmrrw2CRSU0tp/twWEGBzmlzO6nrvIdz7IDvJla7CPrBOe\u002Bf877/5znPy3s4KCq5XE6q/mEYcrtw8VJRopw/d5ZZI9V/RGNDPXVcgiTgef6vXNlsVrzkXSmYIBofh8//HKmZWXH89PmLNENHPjTKw1PQwOd/BkZVAk93D3JrVQi\u002BeSvNLIcmTqAakDftefgYKpUKemMVmg61QmcwYmo6hctXb4jJlOQTJ1ANhkdGod1UCXtzC94P9KPP/wSD7wbQwDUJRlWIxH4Z0MSVNdVgb10tRj8OC4eYQWpqEic7j2EmmRTONIPx6Jg4T1hJnEA1IHtdvauG6GN9\u002BUZcu3UHau0G8avRG6uF\u002Bf6C4spnVAPjDp2QYAhPe73YY66Ddf9B7K4146WwVbPJSTGV2\u002B1GMBiUOujiBKqBQa/DmVMnoNWoEYuMwed9hHg0gvn5H1hYXITR0gj78dPAZgOu3\u002B5aJr5iAhmy1wuZNJxtDuT4OVSUa1FjqQe7vQLhF70w6yqxcx\u002BHUCi0ugQy27ZuQbPdCo26DAc4KxLxGEpKS3G/\u002By6cTice3OuCpmwdAoGAuH7VCWTkBo7jwGcyONreAY/HgyNtHUh/T8Nms/1eAoKykWVZDL7uw8jEN7BcC0KJr/jwyg\u002BTybS0RjkSChrQGhyHWzGdCMN78wrmJsLobHeIz2lrCXkNaA1ybbFY4HK5xJGQT5xQ9B\u002BOVP4nH8BPE6mENmzTR0MAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-03-29T03:42:26.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "run_nsight_compute_exp1.bat",
+              "DocumentMoniker": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\run_nsight_compute_exp1.bat",
+              "RelativeDocumentMoniker": "scripts\\run_nsight_compute_exp1.bat",
+              "ToolTip": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\run_nsight_compute_exp1.bat",
+              "RelativeToolTip": "scripts\\run_nsight_compute_exp1.bat",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABxAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJbSURBVEhL7ZVdSFNhHMafUwyU3FpG2gextWkE7lA4R6S4nVkWCkENtYYQ1U03uwy66LqLoKvdRRd9UKzSjIoYMmrrw2CRSU0tp/twWEGBzmlzO6nrvIdz7IDvJla7CPrBOe\u002Bf877/5znPy3s4KCq5XE6q/mEYcrtw8VJRopw/d5ZZI9V/RGNDPXVcgiTgef6vXNlsVrzkXSmYIBofh8//HKmZWXH89PmLNENHPjTKw1PQwOd/BkZVAk93D3JrVQi\u002BeSvNLIcmTqAakDftefgYKpUKemMVmg61QmcwYmo6hctXb4jJlOQTJ1ANhkdGod1UCXtzC94P9KPP/wSD7wbQwDUJRlWIxH4Z0MSVNdVgb10tRj8OC4eYQWpqEic7j2EmmRTONIPx6Jg4T1hJnEA1IHtdvauG6GN9\u002BUZcu3UHau0G8avRG6uF\u002Bf6C4spnVAPjDp2QYAhPe73YY66Ddf9B7K4146WwVbPJSTGV2\u002B1GMBiUOujiBKqBQa/DmVMnoNWoEYuMwed9hHg0gvn5H1hYXITR0gj78dPAZgOu3\u002B5aJr5iAhmy1wuZNJxtDuT4OVSUa1FjqQe7vQLhF70w6yqxcx\u002BHUCi0ugQy27ZuQbPdCo26DAc4KxLxGEpKS3G/\u002By6cTice3OuCpmwdAoGAuH7VCWTkBo7jwGcyONreAY/HgyNtHUh/T8Nms/1eAoKykWVZDL7uw8jEN7BcC0KJr/jwyg\u002BTybS0RjkSChrQGhyHWzGdCMN78wrmJsLobHeIz2lrCXkNaA1ybbFY4HK5xJGQT5xQ9B\u002BOVP4nH8BPE6mENmzTR0MAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-03-29T03:42:37.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "run_nsight_compute_exp2.bat",
+              "DocumentMoniker": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\run_nsight_compute_exp2.bat",
+              "RelativeDocumentMoniker": "scripts\\run_nsight_compute_exp2.bat",
+              "ToolTip": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\run_nsight_compute_exp2.bat",
+              "RelativeToolTip": "scripts\\run_nsight_compute_exp2.bat",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABxAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJbSURBVEhL7ZVdSFNhHMafUwyU3FpG2gextWkE7lA4R6S4nVkWCkENtYYQ1U03uwy66LqLoKvdRRd9UKzSjIoYMmrrw2CRSU0tp/twWEGBzmlzO6nrvIdz7IDvJla7CPrBOe\u002Bf877/5znPy3s4KCq5XE6q/mEYcrtw8VJRopw/d5ZZI9V/RGNDPXVcgiTgef6vXNlsVrzkXSmYIBofh8//HKmZWXH89PmLNENHPjTKw1PQwOd/BkZVAk93D3JrVQi\u002BeSvNLIcmTqAakDftefgYKpUKemMVmg61QmcwYmo6hctXb4jJlOQTJ1ANhkdGod1UCXtzC94P9KPP/wSD7wbQwDUJRlWIxH4Z0MSVNdVgb10tRj8OC4eYQWpqEic7j2EmmRTONIPx6Jg4T1hJnEA1IHtdvauG6GN9\u002BUZcu3UHau0G8avRG6uF\u002Bf6C4spnVAPjDp2QYAhPe73YY66Ddf9B7K4146WwVbPJSTGV2\u002B1GMBiUOujiBKqBQa/DmVMnoNWoEYuMwed9hHg0gvn5H1hYXITR0gj78dPAZgOu3\u002B5aJr5iAhmy1wuZNJxtDuT4OVSUa1FjqQe7vQLhF70w6yqxcx\u002BHUCi0ugQy27ZuQbPdCo26DAc4KxLxGEpKS3G/\u002By6cTice3OuCpmwdAoGAuH7VCWTkBo7jwGcyONreAY/HgyNtHUh/T8Nms/1eAoKykWVZDL7uw8jEN7BcC0KJr/jwyg\u002BTybS0RjkSChrQGhyHWzGdCMN78wrmJsLobHeIz2lrCXkNaA1ybbFY4HK5xJGQT5xQ9B\u002BOVP4nH8BPE6mENmzTR0MAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-03-29T03:42:48.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "build_exp1.bat",
+              "DocumentMoniker": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build_exp1.bat",
+              "RelativeDocumentMoniker": "scripts\\build_exp1.bat",
+              "ToolTip": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build_exp1.bat",
+              "RelativeToolTip": "scripts\\build_exp1.bat",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAaAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJbSURBVEhL7ZVdSFNhHMafUwyU3FpG2gextWkE7lA4R6S4nVkWCkENtYYQ1U03uwy66LqLoKvdRRd9UKzSjIoYMmrrw2CRSU0tp/twWEGBzmlzO6nrvIdz7IDvJla7CPrBOe\u002Bf877/5znPy3s4KCq5XE6q/mEYcrtw8VJRopw/d5ZZI9V/RGNDPXVcgiTgef6vXNlsVrzkXSmYIBofh8//HKmZWXH89PmLNENHPjTKw1PQwOd/BkZVAk93D3JrVQi\u002BeSvNLIcmTqAakDftefgYKpUKemMVmg61QmcwYmo6hctXb4jJlOQTJ1ANhkdGod1UCXtzC94P9KPP/wSD7wbQwDUJRlWIxH4Z0MSVNdVgb10tRj8OC4eYQWpqEic7j2EmmRTONIPx6Jg4T1hJnEA1IHtdvauG6GN9\u002BUZcu3UHau0G8avRG6uF\u002Bf6C4spnVAPjDp2QYAhPe73YY66Ddf9B7K4146WwVbPJSTGV2\u002B1GMBiUOujiBKqBQa/DmVMnoNWoEYuMwed9hHg0gvn5H1hYXITR0gj78dPAZgOu3\u002B5aJr5iAhmy1wuZNJxtDuT4OVSUa1FjqQe7vQLhF70w6yqxcx\u002BHUCi0ugQy27ZuQbPdCo26DAc4KxLxGEpKS3G/\u002By6cTice3OuCpmwdAoGAuH7VCWTkBo7jwGcyONreAY/HgyNtHUh/T8Nms/1eAoKykWVZDL7uw8jEN7BcC0KJr/jwyg\u002BTybS0RjkSChrQGhyHWzGdCMN78wrmJsLobHeIz2lrCXkNaA1ybbFY4HK5xJGQT5xQ9B\u002BOVP4nH8BPE6mENmzTR0MAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-03-29T03:41:54.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "build_exp4.bat",
+              "DocumentMoniker": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build_exp4.bat",
+              "RelativeDocumentMoniker": "scripts\\build_exp4.bat",
+              "ToolTip": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build_exp4.bat",
+              "RelativeToolTip": "scripts\\build_exp4.bat",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABKAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJbSURBVEhL7ZVdSFNhHMafUwyU3FpG2gextWkE7lA4R6S4nVkWCkENtYYQ1U03uwy66LqLoKvdRRd9UKzSjIoYMmrrw2CRSU0tp/twWEGBzmlzO6nrvIdz7IDvJla7CPrBOe\u002Bf877/5znPy3s4KCq5XE6q/mEYcrtw8VJRopw/d5ZZI9V/RGNDPXVcgiTgef6vXNlsVrzkXSmYIBofh8//HKmZWXH89PmLNENHPjTKw1PQwOd/BkZVAk93D3JrVQi\u002BeSvNLIcmTqAakDftefgYKpUKemMVmg61QmcwYmo6hctXb4jJlOQTJ1ANhkdGod1UCXtzC94P9KPP/wSD7wbQwDUJRlWIxH4Z0MSVNdVgb10tRj8OC4eYQWpqEic7j2EmmRTONIPx6Jg4T1hJnEA1IHtdvauG6GN9\u002BUZcu3UHau0G8avRG6uF\u002Bf6C4spnVAPjDp2QYAhPe73YY66Ddf9B7K4146WwVbPJSTGV2\u002B1GMBiUOujiBKqBQa/DmVMnoNWoEYuMwed9hHg0gvn5H1hYXITR0gj78dPAZgOu3\u002B5aJr5iAhmy1wuZNJxtDuT4OVSUa1FjqQe7vQLhF70w6yqxcx\u002BHUCi0ugQy27ZuQbPdCo26DAc4KxLxGEpKS3G/\u002By6cTice3OuCpmwdAoGAuH7VCWTkBo7jwGcyONreAY/HgyNtHUh/T8Nms/1eAoKykWVZDL7uw8jEN7BcC0KJr/jwyg\u002BTybS0RjkSChrQGhyHWzGdCMN78wrmJsLobHeIz2lrCXkNaA1ybbFY4HK5xJGQT5xQ9B\u002BOVP4nH8BPE6mENmzTR0MAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-04-05T03:00:29.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "run_nsight_compute_exp3.bat",
+              "DocumentMoniker": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\run_nsight_compute_exp3.bat",
+              "RelativeDocumentMoniker": "scripts\\run_nsight_compute_exp3.bat",
+              "ToolTip": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\run_nsight_compute_exp3.bat",
+              "RelativeToolTip": "scripts\\run_nsight_compute_exp3.bat",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJbSURBVEhL7ZVdSFNhHMafUwyU3FpG2gextWkE7lA4R6S4nVkWCkENtYYQ1U03uwy66LqLoKvdRRd9UKzSjIoYMmrrw2CRSU0tp/twWEGBzmlzO6nrvIdz7IDvJla7CPrBOe\u002Bf877/5znPy3s4KCq5XE6q/mEYcrtw8VJRopw/d5ZZI9V/RGNDPXVcgiTgef6vXNlsVrzkXSmYIBofh8//HKmZWXH89PmLNENHPjTKw1PQwOd/BkZVAk93D3JrVQi\u002BeSvNLIcmTqAakDftefgYKpUKemMVmg61QmcwYmo6hctXb4jJlOQTJ1ANhkdGod1UCXtzC94P9KPP/wSD7wbQwDUJRlWIxH4Z0MSVNdVgb10tRj8OC4eYQWpqEic7j2EmmRTONIPx6Jg4T1hJnEA1IHtdvauG6GN9\u002BUZcu3UHau0G8avRG6uF\u002Bf6C4spnVAPjDp2QYAhPe73YY66Ddf9B7K4146WwVbPJSTGV2\u002B1GMBiUOujiBKqBQa/DmVMnoNWoEYuMwed9hHg0gvn5H1hYXITR0gj78dPAZgOu3\u002B5aJr5iAhmy1wuZNJxtDuT4OVSUa1FjqQe7vQLhF70w6yqxcx\u002BHUCi0ugQy27ZuQbPdCo26DAc4KxLxGEpKS3G/\u002By6cTice3OuCpmwdAoGAuH7VCWTkBo7jwGcyONreAY/HgyNtHUh/T8Nms/1eAoKykWVZDL7uw8jEN7BcC0KJr/jwyg\u002BTybS0RjkSChrQGhyHWzGdCMN78wrmJsLobHeIz2lrCXkNaA1ybbFY4HK5xJGQT5xQ9B\u002BOVP4nH8BPE6mENmzTR0MAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-03-29T03:42:53.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "build_exp3.bat",
+              "DocumentMoniker": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build_exp3.bat",
+              "RelativeDocumentMoniker": "scripts\\build_exp3.bat",
+              "ToolTip": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build_exp3.bat",
+              "RelativeToolTip": "scripts\\build_exp3.bat",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABKAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJbSURBVEhL7ZVdSFNhHMafUwyU3FpG2gextWkE7lA4R6S4nVkWCkENtYYQ1U03uwy66LqLoKvdRRd9UKzSjIoYMmrrw2CRSU0tp/twWEGBzmlzO6nrvIdz7IDvJla7CPrBOe\u002Bf877/5znPy3s4KCq5XE6q/mEYcrtw8VJRopw/d5ZZI9V/RGNDPXVcgiTgef6vXNlsVrzkXSmYIBofh8//HKmZWXH89PmLNENHPjTKw1PQwOd/BkZVAk93D3JrVQi\u002BeSvNLIcmTqAakDftefgYKpUKemMVmg61QmcwYmo6hctXb4jJlOQTJ1ANhkdGod1UCXtzC94P9KPP/wSD7wbQwDUJRlWIxH4Z0MSVNdVgb10tRj8OC4eYQWpqEic7j2EmmRTONIPx6Jg4T1hJnEA1IHtdvauG6GN9\u002BUZcu3UHau0G8avRG6uF\u002Bf6C4spnVAPjDp2QYAhPe73YY66Ddf9B7K4146WwVbPJSTGV2\u002B1GMBiUOujiBKqBQa/DmVMnoNWoEYuMwed9hHg0gvn5H1hYXITR0gj78dPAZgOu3\u002B5aJr5iAhmy1wuZNJxtDuT4OVSUa1FjqQe7vQLhF70w6yqxcx\u002BHUCi0ugQy27ZuQbPdCo26DAc4KxLxGEpKS3G/\u002By6cTice3OuCpmwdAoGAuH7VCWTkBo7jwGcyONreAY/HgyNtHUh/T8Nms/1eAoKykWVZDL7uw8jEN7BcC0KJr/jwyg\u002BTybS0RjkSChrQGhyHWzGdCMN78wrmJsLobHeIz2lrCXkNaA1ybbFY4HK5xJGQT5xQ9B\u002BOVP4nH8BPE6mENmzTR0MAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-03-29T03:42:31.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "query.cu",
+              "DocumentMoniker": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\src\\query.cu",
+              "RelativeDocumentMoniker": "src\\query.cu",
+              "ToolTip": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\src\\query.cu",
+              "RelativeToolTip": "src\\query.cu",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-28T20:37:10.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Experiment1.cu",
+              "DocumentMoniker": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\src\\Experiment1.cu",
+              "RelativeDocumentMoniker": "src\\Experiment1.cu",
+              "ToolTip": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\src\\Experiment1.cu",
+              "RelativeToolTip": "src\\Experiment1.cu",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-28T14:10:34.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "KernelConfig.hpp",
+              "DocumentMoniker": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\include\\KernelConfig.hpp",
+              "RelativeDocumentMoniker": "include\\KernelConfig.hpp",
+              "ToolTip": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\include\\KernelConfig.hpp",
+              "RelativeToolTip": "include\\KernelConfig.hpp",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACsAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-28T14:26:41.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "run_nsight_compute.bat",
+              "DocumentMoniker": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\run_nsight_compute.bat",
+              "RelativeDocumentMoniker": "scripts\\run_nsight_compute.bat",
+              "ToolTip": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\run_nsight_compute.bat",
+              "RelativeToolTip": "scripts\\run_nsight_compute.bat",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAYAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJbSURBVEhL7ZVdSFNhHMafUwyU3FpG2gextWkE7lA4R6S4nVkWCkENtYYQ1U03uwy66LqLoKvdRRd9UKzSjIoYMmrrw2CRSU0tp/twWEGBzmlzO6nrvIdz7IDvJla7CPrBOe\u002Bf877/5znPy3s4KCq5XE6q/mEYcrtw8VJRopw/d5ZZI9V/RGNDPXVcgiTgef6vXNlsVrzkXSmYIBofh8//HKmZWXH89PmLNENHPjTKw1PQwOd/BkZVAk93D3JrVQi\u002BeSvNLIcmTqAakDftefgYKpUKemMVmg61QmcwYmo6hctXb4jJlOQTJ1ANhkdGod1UCXtzC94P9KPP/wSD7wbQwDUJRlWIxH4Z0MSVNdVgb10tRj8OC4eYQWpqEic7j2EmmRTONIPx6Jg4T1hJnEA1IHtdvauG6GN9\u002BUZcu3UHau0G8avRG6uF\u002Bf6C4spnVAPjDp2QYAhPe73YY66Ddf9B7K4146WwVbPJSTGV2\u002B1GMBiUOujiBKqBQa/DmVMnoNWoEYuMwed9hHg0gvn5H1hYXITR0gj78dPAZgOu3\u002B5aJr5iAhmy1wuZNJxtDuT4OVSUa1FjqQe7vQLhF70w6yqxcx\u002BHUCi0ugQy27ZuQbPdCo26DAc4KxLxGEpKS3G/\u002By6cTice3OuCpmwdAoGAuH7VCWTkBo7jwGcyONreAY/HgyNtHUh/T8Nms/1eAoKykWVZDL7uw8jEN7BcC0KJr/jwyg\u002BTybS0RjkSChrQGhyHWzGdCMN78wrmJsLobHeIz2lrCXkNaA1ybbFY4HK5xJGQT5xQ9B\u002BOVP4nH8BPE6mENmzTR0MAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-03-28T13:15:19.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "build.bat",
+              "DocumentMoniker": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build.bat",
+              "RelativeDocumentMoniker": "scripts\\build.bat",
+              "ToolTip": "C:\\Users\\Ximing\\source\\repos\\NVGPUSchedulingAnalysis\\scripts\\build.bat",
+              "RelativeToolTip": "scripts\\build.bat",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAaAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJbSURBVEhL7ZVdSFNhHMafUwyU3FpG2gextWkE7lA4R6S4nVkWCkENtYYQ1U03uwy66LqLoKvdRRd9UKzSjIoYMmrrw2CRSU0tp/twWEGBzmlzO6nrvIdz7IDvJla7CPrBOe\u002Bf877/5znPy3s4KCq5XE6q/mEYcrtw8VJRopw/d5ZZI9V/RGNDPXVcgiTgef6vXNlsVrzkXSmYIBofh8//HKmZWXH89PmLNENHPjTKw1PQwOd/BkZVAk93D3JrVQi\u002BeSvNLIcmTqAakDftefgYKpUKemMVmg61QmcwYmo6hctXb4jJlOQTJ1ANhkdGod1UCXtzC94P9KPP/wSD7wbQwDUJRlWIxH4Z0MSVNdVgb10tRj8OC4eYQWpqEic7j2EmmRTONIPx6Jg4T1hJnEA1IHtdvauG6GN9\u002BUZcu3UHau0G8avRG6uF\u002Bf6C4spnVAPjDp2QYAhPe73YY66Ddf9B7K4146WwVbPJSTGV2\u002B1GMBiUOujiBKqBQa/DmVMnoNWoEYuMwed9hHg0gvn5H1hYXITR0gj78dPAZgOu3\u002B5aJr5iAhmy1wuZNJxtDuT4OVSUa1FjqQe7vQLhF70w6yqxcx\u002BHUCi0ugQy27ZuQbPdCo26DAc4KxLxGEpKS3G/\u002By6cTice3OuCpmwdAoGAuH7VCWTkBo7jwGcyONreAY/HgyNtHUh/T8Nms/1eAoKykWVZDL7uw8jEN7BcC0KJr/jwyg\u002BTybS0RjkSChrQGhyHWzGdCMN78wrmJsLobHeIz2lrCXkNaA1ybbFY4HK5xJGQT5xQ9B\u002BOVP4nH8BPE6mENmzTR0MAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-03-28T13:08:48.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CMake Overview Pages",
+              "DocumentMoniker": "CMake Overview Pages",
+              "ToolTip": "CMake Overview Pages",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-28T13:08:30.125Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
