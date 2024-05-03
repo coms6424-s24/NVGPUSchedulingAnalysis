@@ -5,7 +5,8 @@
 #include "../include/KernelGenerator.cuh"
 #include "../include/SchedulingPredictor.hpp"
 
-int main() {
+int main()
+{
     try {
         int num_devices = 0;
         cudaGetDeviceCount(&num_devices);
@@ -24,8 +25,8 @@ int main() {
         const int num_kernels_per_stream = 10;
         
         int max_blocks = std::min(144, device_props.maxGridSize[0]);  // Safeguard to not exceed device capability
-        int max_threads = std::min(256, device_props.maxThreadsPerBlock);  // Adjust based on device limits
-        int max_shared_mem = device_props.sharedMemPerBlock;  // Use a safe limit for shared memory
+        int max_threads = std::min(256, device_props.maxThreadsPerBlock);
+        int max_shared_mem = device_props.sharedMemPerBlock;
 
         const int num_sms = device_props.multiProcessorCount;
 
@@ -48,7 +49,8 @@ int main() {
         input_file >> training_data;
         input_file.close();
 
-        scheduling_predictor.Predict(training_data);
+        scheduling_predictor.RoundRobinPredict(training_data);
+        //scheduling_predictor.Predict(training_data);
         scheduling_predictor.ComparePredictions(training_data);
 
         std::cout << "Kernels executed and data processed successfully." << std::endl;

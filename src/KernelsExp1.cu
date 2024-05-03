@@ -33,7 +33,7 @@ __global__ void kernel3()
 // Kernel 4: Performs trigonometric operations on a float value using shared memory.
 __global__ void kernel4()
 {
-    __shared__ float sharedMem[256];
+    __shared__ float sharedMem[256* 30];
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
     sharedMem[threadIdx.x] = static_cast<float>(idx) * 4.5f;
     __syncthreads();
@@ -45,7 +45,7 @@ __global__ void kernel4()
 // Kernel 5: Performs logarithmic and exponential operations on a double value using shared memory.
 __global__ void kernel5()
 {
-    __shared__ double sharedMem[256];
+    __shared__ double sharedMem[256 * 40];
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
     sharedMem[threadIdx.x] = static_cast<double>(idx) * 5.5;
     __syncthreads();
