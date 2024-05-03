@@ -9,9 +9,72 @@ SchedulingPredictor::SchedulingPredictor(int num_SMs) : num_SMs_(num_SMs)
     }
 }
 
+void SchedulingPredictor::RoundRobinPredict(const nlohmann::json& training_data)
+{
+    predictions_.clear();
+
+    // Initialize variables to count the number of streams, kernels, and blocks
+    int num_streams = 0;
+    int num_kernels_per_stream = 0;
+    int num_blocks_per_kernel = 0;
+    std::unordered_map<int, int> stream_kernel_count;
+    std::unordered_map<std::string, int> kernel_block_count;
+
+    // Traverse the JSON object to count streams, kernels, and blocks
+    for (const auto& kernel_data : training_data) {
+        int stream_id = kernel_data["stream"];
+        std::string kernel_name = kernel_data["kernel"];
+        const auto& blocks_data = kernel_data["blocks"];
+        
+        // Update stream count
+        if (stream_kernel_count.find(stream_id) == stream_kernel_count.end()) {
+            stream_kernel_count[stream_id] = 0;
+        }
+        stream_kernel_count[stream_id]++;
+
+        // Count kernels and blocks
+        kernel_block_count[kernel_name] = blocks_data.size();
+    }
+
+    // Determine number of streams and maximum kernels per stream
+    num_streams = stream_kernel_count.size();
+    for (const auto& sk : stream_kernel_count) {
+        if (sk.second > num_kernels_per_stream) {
+            num_kernels_per_stream = sk.second;
+        }
+    }
+
+    // Determine maximum blocks per kernel
+    for (const auto& kb : kernel_block_count) {
+        if (kb.second > num_blocks_per_kernel) {
+            num_blocks_per_kernel = kb.second;
+        }
+    }
+
+    // Run the Round Robin scheduling prediction
+    for (int stream_id = 0; stream_id < num_streams; stream_id++) {
+        auto& stream_predictions = predictions_[stream_id];
+
+        for (int kernel_id = 0; kernel_id < num_kernels_per_stream; kernel_id++) {
+            std::string kernel_key = "Kernel" + std::to_string(kernel_id);
+            auto& block_predictions = stream_predictions[kernel_key];
+            block_predictions.resize(num_blocks_per_kernel);
+
+            std::generate(block_predictions.begin(), block_predictions.end(), [this]() {
+                int sm_id = round_robin_queue_.front();
+                round_robin_queue_.push(sm_id);
+                round_robin_queue_.pop();
+                return sm_id;
+            });
+        }
+    }
+}
+
 void SchedulingPredictor::Predict(const nlohmann::json& training_data)
 {
     predictions_.clear();
+    auto used_sms = std::vector<int>(num_SMs_);
+    
 
     cudaDeviceProp prop;
     cudaError_t status = cudaGetDeviceProperties(&prop, 0);
@@ -58,11 +121,6 @@ void SchedulingPredictor::Predict(const nlohmann::json& training_data)
                 int SM_b = 16; // available thread block slots
                 int SM_TPC_config_s = prop.sharedMemPerBlock; // TPC shared memory configuration
                 int SM_s = prop.maxBlocksPerMultiProcessor * prop.sharedMemPerBlock; // available shared memory
-
-                // Check shared memory configuration
-                if (TB_config_s > SM_TPC_config_s) {
-                    continue;
-                }
 
                 // Calculate limits
                 int limit_b = SM_b;
@@ -120,8 +178,5 @@ void SchedulingPredictor::ComparePredictions(const nlohmann::json& training_data
                 }
             }
         }
-        
-        double accuracy = static_cast<double>(num_correct_predictions) / actual_mappings.size();
-        std::cout << "Prediction Accuracy: " << accuracy * 100 << "%\n" << std::endl;
     }
 }

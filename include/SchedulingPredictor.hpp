@@ -14,6 +14,9 @@ public:
     explicit SchedulingPredictor(int num_SMs);
 
     // Initialize round-robin predictions for each block in each kernel on each stream
+    void RoundRobinPredict(const nlohmann::json& training_data);
+
+    // Predict each block in each kernel on each stream
     void Predict(const nlohmann::json& training_data);
 
     // Get predictions for a specific stream and kernel
