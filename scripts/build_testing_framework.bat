@@ -1,6 +1,6 @@
 @echo off
 
-set VSCOMPILER="D:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64"
+set VSCOMPILER="E:\visual studio\VC\Tools\MSVC\14.39.33519\bin\Hostx64\x64"
 set SRCFILES=../src/TestingFramework.cu ../src/SchedulingPredictor.cpp ../src/KernelGenerator.cu
 set OUTPUT=-o TestingFramework.exe
 set INCLUDES=-I "../include"
